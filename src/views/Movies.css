@@ -1,0 +1,147 @@
+.contenedorPokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .linkedIn {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .imagenPoke {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .imagenHeader {
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .barra-busqueda {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    gap: 10px;
+  }
+  
+  .input-busqueda {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .pokemon {
+    margin: 10px;
+    padding: 10px;
+    border: 4px solid #94294e;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #242424;
+  }
+  
+  .pokemon:hover {
+    background-color: #515151;
+  }
+  
+  .navLink {
+    color: white;
+  }
+  
+  .tipoPokemon {
+    font-weight: bold;
+  }
+  
+  .infoPoke {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .imgFooter {
+    height: 20px;
+  }
+  
+  .cajaCargando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  .cargandoDB {
+    color: aliceblue;
+  }
+  
+  /* 🌐 RESPONSIVE DESIGN */
+  
+  @media (max-width: 768px) {
+    .contenedorPokemons {
+      padding: 1rem;
+    }
+  
+    .pokemon {
+      width: 150px;
+      margin: 8px;
+      padding: 8px;
+    }
+  
+    .imagenPoke {
+      height: 150px;
+    }
+  
+    .input-busqueda {
+      width: 250px;
+    }
+  
+    .linkedIn {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenedorPokemons {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    .pokemon {
+      width: 80%;
+      max-width: 250px;
+    }
+  
+    .imagenPoke {
+      height: 150px;
+    }
+  
+    .input-busqueda {
+      width: 80%;
+    }
+  
+    .linkedIn {
+      width: 100%;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }

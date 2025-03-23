@@ -1,0 +1,37 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #360f0f;
+}
+
+body{
+  margin: 0px;
+}
+
+
+
+.header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background-color: #94294e;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background-color: #2a2a2a;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,141 @@
+.cajaPokemon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.informacionPokemon {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.imagenDetalle {
+  width: 250px;
+  max-width: 80%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.contenedorImagenPokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedorDatosPokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.infoPokemon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.imgVolver {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.botonInfo {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contenedorEstadisticas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .cajaPokemon {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contenedorDatosPokemon {
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .contenedorEstadisticas {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imagenDetalle {
+    width: 200px;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagenDetalle {
+    width: 150px;
+  }
+
+  .contenedorImagenPokemon {
+    flex-direction: row;
+  }
+
+  .infoPokemon {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contenedorDatosPokemon {
+    align-items: center;
+    margin: 0;
+  }
+
+  .botonInfo {
+    width: 80%;
+  }
+}

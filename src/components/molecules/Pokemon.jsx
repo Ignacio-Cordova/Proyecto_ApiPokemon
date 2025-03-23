@@ -1,10 +1,3 @@
-
-async function conseguirPokemonSeleccionado(pokemon) {
-    const res = await fetch(pokemon.url);
-    const data = await res.json();
-    return data;
-}
-
 const Pokemon = (props) => {
     const { id, name, type, base, image, onClick, region } = props;
     return (

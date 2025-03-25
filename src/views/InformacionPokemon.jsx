@@ -1,7 +1,7 @@
 import React, { use, useState } from "react";
-import Button from "../atoms/Button";
+import Button from "../components/atoms/Button";
 import { useEffect } from "react";
-import "../../views/informacionPokemon.css";
+import "../styles/informacionPokemon.css";
 
 const InformacionPokemon = () => {
   const [pokemon, setPokemon] = useState({});
@@ -14,9 +14,12 @@ const InformacionPokemon = () => {
   }, []);
 
   if (!pokemon.sprites) {
-    return <p>Cargando información...</p>;
+    return (
+      <div className="cajaCargando">
+        <p className="cargandoDB">Cargando...</p>
+      </div>
+    );
   }
-
   const siguientePokemon = () => {
     const siguientePokemon = pokemon.id + 1;
     fetch(`https://pokeapi.co/api/v2/pokemon/${siguientePokemon}`)

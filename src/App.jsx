@@ -1,14 +1,8 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
+import React from 'react'
+import MenuPrincipal from "./views/MenuPrincipal";
 
 function App() {
-  
-
-  return (
-    <>
-      <p>Hola mundo</p>
-    </>
-  )
+  return <MenuPrincipal />;
 }
 
-export default App
+export default App;

@@ -132,7 +132,7 @@
     }
   
     .imagenPoke {
-      height: 150px;
+      height: auto;
     }
   
     .input-busqueda {

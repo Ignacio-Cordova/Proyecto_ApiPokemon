@@ -139,3 +139,14 @@
     width: 80%;
   }
 }
+
+.cajaCargando {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.cargandoDB {
+  color: aliceblue;
+}

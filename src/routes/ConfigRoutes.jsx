@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router';
 import App from '../App.jsx';
 import MenuPrincipal from '../views/MenuPrincipal.jsx';
-import InformacionPokemon from '../components/organisms/InformacionPokemon.jsx';
+import InformacionPokemon from '../views/InformacionPokemon.jsx';
 
 const AppRoutes = () => {
     return (

@@ -21,12 +21,15 @@ function Movies() {
       const promesas = pokemones.map(async (pokemon) => {
         try {
           const res = await fetch(pokemon.url);
+          if (!res.ok) throw new Error(`Error al obtener los datos de ${pokemon.name}`);
           const data = await res.json();
 
           const res2 = await fetch(data.species.url);
+          if (!res2.ok) throw new Error(`Error al obtener los datos de especie para ${pokemon.name}`);
           const data2 = await res2.json();
 
           const res3 = await fetch(data2.generation.url);
+          if (!res3.ok) throw new Error(`Error al obtener los datos de generacion para ${pokemon.name}`);
           const data3 = await res3.json();
 
           await delay(1000);
@@ -40,7 +43,7 @@ function Movies() {
           };
         } catch (error) {
           console.error(`Error con ${pokemon.name}:`, error.message);
-          return null; // Filtrar luego los nulos
+          return null; 
         }
 
       });
@@ -111,7 +114,7 @@ function Movies() {
   if (loading)
     return (
       <div className="cajaCargando">
-        <p className="cargandoDB">Cargando...</p>
+      <p className="cargandoDB">Cargando... (Esto puede demorar un poco)</p>
       </div>
     );
   if (error)

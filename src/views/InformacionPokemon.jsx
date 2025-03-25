@@ -1,8 +1,7 @@
-import React, { use, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/atoms/Button";
 import CajaPokemon from "../components/organisms/CajaPokemon";
 import PokemonClick from "../components/organisms/PokemonClick";
-import { useEffect } from "react";
 import "../styles/informacionPokemon.css";
 
 const InformacionPokemon = () => {
@@ -15,20 +14,13 @@ const InformacionPokemon = () => {
       .then((data) => setPokemon(data));
   }, []);
 
-  if (!pokemon.sprites) {
-    return (
-      <div className="cajaCargando">
-        <PokemonClick pokemon={pokemon}></PokemonClick>
-        <p className="cargandoDB">Cargando...</p>
-      </div>
-    );
-  }
   const siguientePokemon = () => {
     const siguientePokemon = pokemon.id + 1;
     fetch(`https://pokeapi.co/api/v2/pokemon/${siguientePokemon}`)
       .then((response) => response.json())
       .then((data) => setPokemon(data));
   };
+
   const anteriorPokemon = () => {
     const anteriorPokemon = pokemon.id - 1;
     fetch(`https://pokeapi.co/api/v2/pokemon/${anteriorPokemon}`)
@@ -39,6 +31,15 @@ const InformacionPokemon = () => {
   const irAlMenu = () => {
     window.close();
   };
+
+  if (!pokemon.sprites) {
+    return (
+      <div className="cajaCargando">
+        <PokemonClick pokemon={pokemon}></PokemonClick>
+        <p className="cargandoDB">Cargando...</p>
+      </div>
+    );
+  }
 
   return (
     <>

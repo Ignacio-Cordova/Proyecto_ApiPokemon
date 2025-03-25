@@ -3,26 +3,26 @@ import Input from "../atoms/Input";
 import { useState } from "react";
 
 const tipos = [
-  { value: "todos", label: "Todos" },
-  { value: "normal", label: "Normal" },
-  { value: "fire", label: "Fuego" },
-  { value: "water", label: "Agua" },
-  { value: "rock", label: "Roca" },
-  { value: "poison", label: "Veneno" },
-  { value: "fairy", label: "Hada" },
-  { value: "bug", label: "Bicho"},
-  { value: "psychic", label: "Psiquico" },
+  { value: "todos", label: "Todos los tipos" },
+  { value: "acero", label: "Acero" },
+  { value: "agua", label: "Agua" },
+  { value: "bicho", label: "Bicho" },
   { value: "dragon", label: "Dragon" },
-  { value: "fighting", label: "Lucha" },
-  { value: "ghost", label: "Fantasma" },
-  { value: "electric", label: "Electrico" },
-  { value: "grass", label: "Planta" },
-  { value: "ice", label: "Hielo" },
-  { value: "Steel", label: "Acero" },
-  { value: "flying", label: "Volador" },
-  { value: "dark", label: "Oscuridad" },
-  { value: "ground", label: "Tierra" }
-]
+  { value: "electrico", label: "Electrico" },
+  { value: "fuego", label: "Fuego" },
+  { value: "fantasma", label: "Fantasma" },
+  { value: "hada", label: "Hada" },
+  { value: "hielo", label: "Hielo" },
+  { value: "lucha", label: "Lucha" },
+  { value: "normal", label: "Normal" },
+  { value: "oscuridad", label: "Oscuridad" },
+  { value: "planta", label: "Planta" },
+  { value: "psiquico", label: "Psiquico" },
+  { value: "roca", label: "Roca" },
+  { value: "tierra", label: "Tierra" },
+  { value: "veneno", label: "Veneno" },
+  { value: "volador", label: "Volador" }
+];
 
 const regiones = [
   { value: "todas", label: "Todas las regiones" },

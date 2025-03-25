@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const tipos = [
   { value: "todos", label: "Todos los tipos" },
-  { value: "acero", label: "Acero" },
-  { value: "agua", label: "Agua" },
-  { value: "bicho", label: "Bicho" },
+  { value: "steel", label: "Acero" },
+  { value: "water", label: "Agua" },
+  { value: "bug", label: "Bicho" },
   { value: "dragon", label: "Dragon" },
-  { value: "electrico", label: "Electrico" },
-  { value: "fuego", label: "Fuego" },
-  { value: "fantasma", label: "Fantasma" },
-  { value: "hada", label: "Hada" },
-  { value: "hielo", label: "Hielo" },
-  { value: "lucha", label: "Lucha" },
+  { value: "electric", label: "Electrico" },
+  { value: "fire", label: "Fuego" },
+  { value: "ghost", label: "Fantasma" },
+  { value: "fairy", label: "Hada" },
+  { value: "ice", label: "Hielo" },
+  { value: "fighting", label: "Lucha" },
   { value: "normal", label: "Normal" },
-  { value: "oscuridad", label: "Oscuridad" },
-  { value: "planta", label: "Planta" },
-  { value: "psiquico", label: "Psiquico" },
-  { value: "roca", label: "Roca" },
-  { value: "tierra", label: "Tierra" },
-  { value: "veneno", label: "Veneno" },
-  { value: "volador", label: "Volador" }
+  { value: "dark", label: "Oscuridad" },
+  { value: "grass", label: "Planta" },
+  { value: "psychic", label: "Psiquico" },
+  { value: "rock", label: "Roca" },
+  { value: "ground", label: "Tierra" },
+  { value: "poison", label: "Veneno" },
+  { value: "flying", label: "Volador" }
 ];
 
 const regiones = [

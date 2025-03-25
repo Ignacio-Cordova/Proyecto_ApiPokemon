@@ -3,8 +3,6 @@ import Pokemon from "../components/molecules/Pokemon";
 import BarraBusqueda from "../components/organisms/BarraBusqueda";
 import "../styles/menuPrincipal.css";
 
-let aux = [];
-
 function Movies() {
   // Estados
   const [pokemon, setPokemon] = useState([]);
@@ -15,6 +13,7 @@ function Movies() {
   const [search, setSearch] = useState("");
   const [filtroActual, setFiltroActual] = useState([]);
 
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   // Función para obtener atributos de los Pokémon
   async function conseguirAtributosPokemon(pokemones) {
@@ -22,18 +21,15 @@ function Movies() {
       const promesas = pokemones.map(async (pokemon) => {
         try {
           const res = await fetch(pokemon.url);
-          if (!res.ok) throw new Error(`No encontrado: ${pokemon.name}`);
           const data = await res.json();
 
           const res2 = await fetch(data.species.url);
-          if (!res2.ok)
-            throw new Error(`No species encontrado: ${pokemon.name}`);
           const data2 = await res2.json();
 
           const res3 = await fetch(data2.generation.url);
-          if (!res3.ok)
-            throw new Error(`No generation encontrado: ${pokemon.name}`);
           const data3 = await res3.json();
+
+          await delay(1000);
 
           return {
             name: pokemon.name,
@@ -46,6 +42,7 @@ function Movies() {
           console.error(`Error con ${pokemon.name}:`, error.message);
           return null; // Filtrar luego los nulos
         }
+
       });
 
       const resultados = await Promise.all(promesas);

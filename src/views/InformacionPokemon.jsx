@@ -1,7 +1,7 @@
 import React, { use, useState } from "react";
 import Button from "../components/atoms/Button";
-import CajaPokemon from "../components/organisms/cajaPokemon";
-import PokemonClick from "../components/organisms/pokemonClick";
+import CajaPokemon from "../components/organisms/CajaPokemon";
+import PokemonClick from "../components/organisms/PokemonClick";
 import { useEffect } from "react";
 import "../styles/informacionPokemon.css";
 

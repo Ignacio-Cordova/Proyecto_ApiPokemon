@@ -52,7 +52,7 @@ const BarraBusqueda = ({ search, setSearch,
         className="input-busqueda"
         placeholder="Buscar Pokemon"
         onChange={(e) => {
-          setSearch(e.target.value)
+          setSearch((e.target.value).toLowerCase());
           } 
         }
       />

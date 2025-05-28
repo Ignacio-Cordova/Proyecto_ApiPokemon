@@ -3,7 +3,7 @@ import Pokemon from "../components/molecules/Pokemon";
 import BarraBusqueda from "../components/organisms/BarraBusqueda";
 import "../styles/menuPrincipal.css";
 
-function Movies() {
+function MenuPrincipal() {
   // Estados
   const [pokemon, setPokemon] = useState([]);
   const [tipoSeleccionado, setTipoSeleccionado] = useState("");
@@ -57,7 +57,7 @@ function Movies() {
   }
 
   // Función para obtener los Pokémon
-  const getPokemon = async () => {
+  const obtenerPokemon = async () => {
     try {
       const res = await fetch(
         "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0"
@@ -80,7 +80,7 @@ function Movies() {
   // Efectos
   useEffect(() => {
     if (regionSeleccionada !== "") return;
-    getPokemon();
+    obtenerPokemon();
   }, []);
 
   useEffect(() => {
@@ -110,7 +110,7 @@ function Movies() {
     setFiltroActual(filtrados);
   }, [search, tipoSeleccionado, pokemon, regionSeleccionada]);
 
-  // Renderizado
+  // Cargando y error
   if (loading)
     return (
       <div className="cajaCargando">
@@ -159,4 +159,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default MenuPrincipal;

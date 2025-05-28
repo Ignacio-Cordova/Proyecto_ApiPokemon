@@ -2,19 +2,54 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  color-scheme: light dark; 
+}
 
-  color-scheme: light dark;
+body {
+  margin: 0px;
+}
+
+/* Estilos del tema moderno */
+body.theme-moderno {
   color: rgba(255, 255, 255, 0.87);
   background-color: #360f0f;
 }
 
-body{
-  margin: 0px;
+body.theme-moderno select {
+  width: 200px;
+  height: 40px;
+  background-color: #94294e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
+body.theme-moderno .header {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #94294e;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+}
 
+body.theme-moderno .header > :first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-.header{
+body.theme-moderno .header > :last-child {
+  margin-left: auto;
+}
+
+body.theme-moderno .footer{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -22,10 +57,46 @@ body{
   background-color: #94294e;
   color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+
 }
 
-.footer{
+
+
+body {
+  margin: 0px;
+}
+
+/* Estilos del tema retro */
+body.theme-retro {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #360f0f;
+}
+
+body.theme-retro .header {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #94294e;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+body.theme-retro .header > :first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body.theme-retro .header > :last-child {
+  margin-left: auto;
+}
+
+body.theme-retro .footer{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
